@@ -1,5 +1,5 @@
 <template>
-	<div class="person-center">.......111</div>
+	<div class="health">健康</div>
 </template>
 
 <script>

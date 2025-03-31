@@ -101,8 +101,8 @@
 								icon: 'success'
 							});
 							// 登录成功后跳转页面（示例）
-							uni.navigateTo({
-								url: '/pages/Gadget/personCenter'
+							uni.switchTab({
+								url: '/pages/index/index'
 							});
 						} else {
 							uni.showToast({

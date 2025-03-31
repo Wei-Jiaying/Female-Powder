@@ -133,7 +133,7 @@
 								icon: 'success'
 							});
 							uni.navigateTo({
-								url: '/pages/Gadget/personCenter'
+								url: '/pages/Gadget/login'
 							});
 						} else {
 							uni.showToast({

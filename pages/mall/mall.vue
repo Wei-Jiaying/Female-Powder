@@ -1,5 +1,5 @@
 <template>
-	<div class="person-center">.......111</div>
+	<div class="mall">商城</div>
 </template>
 
 <script>

@@ -1,5 +1,5 @@
 <template>
-	<div class="person-center">.......111</div>
+	<div class="ai">ai</div>
 </template>
 
 <script>
