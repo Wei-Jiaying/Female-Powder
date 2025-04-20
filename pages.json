@@ -38,7 +38,8 @@
 		{
 			"path": "pages/mall/mall",
 			"style": {
-				"navigationBarTitleText": "商城"
+				"navigationBarTitleText": "商城",
+				"navigationStyle": "custom"
 			}
 		},
 		{
@@ -53,6 +54,22 @@
 			"path": "pages/health/health",
 			"style": {
 				"navigationBarTitleText": "健康",
+				"navigationStyle": "custom"
+				
+			}
+		},
+		{
+			"path": "pages/health/healthSport",
+			"style": {
+				"navigationBarTitleText": "健康运动",
+				"navigationStyle": "custom"
+				
+			}
+		},
+		{
+			"path": "pages/health/healthTool",
+			"style": {
+				"navigationBarTitleText": "健康功能",
 				"navigationStyle": "custom"
 				
 			}
@@ -88,7 +105,7 @@
 				"selectedIconPath": "static/tabbar/ai_active.png"
 			},
 			{
-				"pagePath": "pages/health/health",
+				"pagePath": "pages/health/healthTool",
 				"text": "健康",
 				"iconPath": "static/tabbar/health_normal.png",
 				"selectedIconPath": "static/tabbar/health_active.png"
