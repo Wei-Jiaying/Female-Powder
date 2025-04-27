@@ -38,7 +38,8 @@
 		{
 			"path": "pages/mall/mall",
 			"style": {
-				"navigationBarTitleText": "商城"
+				"navigationBarTitleText": "商城",
+				"navigationStyle": "custom"
 			}
 		},
 		{
