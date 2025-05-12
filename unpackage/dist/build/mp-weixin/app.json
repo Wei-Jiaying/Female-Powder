@@ -1,0 +1,59 @@
+{
+  "pages": [
+    "pages/Gadget/begin",
+    "pages/Gadget/personCenter",
+    "pages/Gadget/register",
+    "pages/Gadget/login",
+    "pages/index/index",
+    "pages/mall/mall",
+    "pages/ai/ai",
+    "pages/health/health",
+    "pages/health/healthSport",
+    "pages/health/healthTool"
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "color": "#666666",
+    "selectedColor": "#F23E50",
+    "backgroundColor": "rgb(249,248,251)",
+    "borderStyle": "rgb(249,248,251)",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "static/tabbar/home_normal.png",
+        "selectedIconPath": "static/tabbar/home_active.png"
+      },
+      {
+        "pagePath": "pages/mall/mall",
+        "text": "商城",
+        "iconPath": "static/tabbar/mall_normal.png",
+        "selectedIconPath": "static/tabbar/mall_active.png"
+      },
+      {
+        "pagePath": "pages/ai/ai",
+        "text": "AI",
+        "iconPath": "static/tabbar/ai_normal.png",
+        "selectedIconPath": "static/tabbar/ai_active.png"
+      },
+      {
+        "pagePath": "pages/health/healthTool",
+        "text": "健康",
+        "iconPath": "static/tabbar/health_normal.png",
+        "selectedIconPath": "static/tabbar/health_active.png"
+      },
+      {
+        "pagePath": "pages/Gadget/personCenter",
+        "text": "我的",
+        "iconPath": "static/tabbar/mine_normal.png",
+        "selectedIconPath": "static/tabbar/mine_active.png"
+      }
+    ]
+  },
+  "usingComponents": {}
+}

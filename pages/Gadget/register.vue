@@ -40,7 +40,12 @@
 
 				<!-- 协议部分 -->
 				<view class="agreement-group">
-					<checkbox-group v-model="agreePrivacy" @change="onAgreeChange">
+					<!-- <checkbox-group v-model="agreePrivacy" @change="onAgreeChange">
+						<label>
+							<checkbox value="1" />
+						</label>
+					</checkbox-group> -->
+					<checkbox-group @change="onAgreeChange">
 						<label>
 							<checkbox value="1" />
 						</label>
@@ -79,7 +84,7 @@
 					username: this.username,
 					password: this.password,
 					confirmPassword: this.confirmPassword,
-					agreePrivacy: this.agreePrivacy // 直接使用 agreePrivacy
+					agreePrivacy: 1 // 直接使用 agreePrivacy
 				});
 
 				if (!this.username) {

@@ -32,7 +32,7 @@
 			"style": {
 				"navigationBarTitleText": "首页",
 				"navigationStyle": "custom"
-				
+
 			}
 		},
 		{
@@ -47,7 +47,7 @@
 			"style": {
 				"navigationBarTitleText": "AI",
 				"navigationStyle": "custom"
-				
+
 			}
 		},
 		{
@@ -55,7 +55,7 @@
 			"style": {
 				"navigationBarTitleText": "健康",
 				"navigationStyle": "custom"
-				
+
 			}
 		},
 		{
@@ -63,7 +63,7 @@
 			"style": {
 				"navigationBarTitleText": "健康运动",
 				"navigationStyle": "custom"
-				
+
 			}
 		},
 		{
@@ -71,7 +71,15 @@
 			"style": {
 				"navigationBarTitleText": "健康功能",
 				"navigationStyle": "custom"
-				
+
+			}
+		},
+		{
+			"path": "pages/health/healthPrepare",
+			"style": {
+				"navigationBarTitleText": "健康备孕",
+				"navigationStyle": "custom"
+		
 			}
 		}
 	],

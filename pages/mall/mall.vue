@@ -39,13 +39,13 @@
 			<div class="title">精品推荐</div>
 			<div class="content">
 				<div class="content1">
-					<image src="/static/Mall/content1.png" mode=""></image>e
+					<image src="/static/Mall/content1.png" mode=""></image>
 				</div>
 				<div class="content2">
-					<image src="/static/Mall/content2.png" mode=""></image>e
+					<image src="/static/Mall/content2.png" mode=""></image>
 				</div>
 				<div class="content3">
-					<image src="/static/Mall/content3.png" mode=""></image>e
+					<image src="/static/Mall/content3.png" mode=""></image>
 				</div>
 			</div>
 		</div>
