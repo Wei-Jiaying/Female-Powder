@@ -49,6 +49,8 @@
 </template>
 
 <script>
+	import {loginApi} from '../../request/aip/login'
+	
 	export default {
 		data() {
 			return {
@@ -62,63 +64,62 @@
 					delta: 1
 				});
 			},
-			handleLogin() {
-				// 校验输入是否为空
-				if (!this.username || !this.password) {
-					uni.showToast({
-						title: '账号或密码不能为空',
-						icon: 'none'
-					});
-					return;
-				}
-
-				uni.request({
-					url: '/api/common/login', // 登录接口地址
-					method: 'POST',
-					header: {
-						'Content-Type': 'application/json'
-					},
-					data: {
-						username: this.username,
-						password: this.password,
-						agreePrivacy: 1 // 根据接口要求补充参数
-					},
-					success: (res) => {
-						console.log('登录接口响应', res.data);
-						if (res.data.code === 1) { // 假设 code 为 1 表示成功
-							const {
-								token,
-								username: userName
-							} = res.data.data;
-
-							// 存储 token（同步存储示例）
-							uni.setStorageSync('userToken', token);
-							// 可选：存储用户名等其他信息
-							uni.setStorageSync('userName', userName);
-
-							uni.showToast({
-								title: '登录成功',
-								icon: 'success'
-							});
-							// 登录成功后跳转页面（示例）
-							uni.switchTab({
-								url: '/pages/index/index'
-							});
-						} else {
-							uni.showToast({
-								title: res.data.msg || '登录失败',
-								icon: 'none'
-							});
-						}
-					},
-					fail: (err) => {
-						console.error('登录接口请求失败', err);
-						uni.showToast({
-							title: '网络请求失败，请检查网络',
-							icon: 'none'
-						});
-					}
-				});
+			async handleLogin() {
+			  // 校验输入是否为空
+			  if (!this.username || !this.password) {
+			    uni.showToast({
+			      title: '账号或密码不能为空',
+			      icon: 'none'
+			    });
+			    return;
+			  }
+			  
+			  try {
+			    // 打印请求参数
+			    console.log({
+			      username: this.username,
+			      password: this.password,
+			      agreePrivacy: 1
+			    });
+			    
+			    // 调用登录接口
+			    const res = await loginApi({
+			      username: this.username,
+			      password: this.password,
+			      agreePrivacy: 1
+			    });
+			    
+			    // 处理接口响应
+			    console.log('登录接口响应', res);
+			    if (res.data.code === 1) { // 假设 code 为 1 表示成功
+			      const { message, username: userName, token } = res.data.data;
+			      // 存储 token
+			      uni.setStorageSync('userToken', token);
+			      // 存储用户名等其他信息
+			      uni.setStorageSync('userName', userName);
+			      
+			      uni.showToast({
+			        title: message || '登录成功',
+			        icon: 'success'
+			      });
+			      
+			      // 登录成功后跳转页面
+			      uni.switchTab({
+			        url: '/pages/index/index'
+			      });
+			    } else {
+			      uni.showToast({
+			        title: res.msg || '登录失败',
+			        icon: 'none'
+			      });
+			    }
+			  } catch (err) {
+			    console.error('登录接口请求失败', err);
+			    uni.showToast({
+			      title: '网络请求失败，请检查网络',
+			      icon: 'none'
+			    });
+			  }
 			}
 		}
 	};

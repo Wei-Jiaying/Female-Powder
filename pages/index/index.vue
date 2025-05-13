@@ -32,35 +32,38 @@
             </div>
             <div class="tweet-items-container">
                 <div v-for="(tweet, index) in tweets" :key="index" class="tweet-item" @click="ClickTweet(tweet)">
-                    <div class="tweet-time">{{ tweet.time }}</div>
+                    <div class="tweet-time">{{ formatDate(tweet.createTime) }}</div>
                     <div class="tweet-content">
                         <div class="item-left">
                             <div class="tweet-title-text">{{ tweet.title }}</div>
                             <div class="stats-container">
-                                <span class="stats">阅读: {{ tweet.readCount }}</span>
-                                <span class="stats">赞：{{ tweet.likeCount }}</span>
-                                <span class="stats">分享：{{ tweet.shareCount }}</span>
+                                <span class="stats">阅读: {{ tweet.viewCounts }}</span>
+                                <span class="stats">赞：{{ tweet.likeCounts }}</span>
+                                <span class="stats">分享：{{ tweet.shareCounts }}</span>
                             </div>
                         </div>
                         <div class="item-right">
-                            <image :src="tweet.image" mode="aspectFill"></image>
+                            <image :src="getImageUrl(tweet.imageUrl)" mode="aspectFill"></image>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+		<div class="zw">___</div>
     </div>
 </template>
 
 <script>
+import {getArticleApi} from '../../request/aip/article.js'
+
 export default {
     data() {
         return {
             ImagesList: [
-                'https://picsum.photos/200/300',
-                'https://picsum.photos/200/301',
-                'https://picsum.photos/200/302'
-            ],
+                        'https://picsum.photos/id/1000/800/400', // 女性健康相关图片
+                        'https://picsum.photos/id/1011/800/400', // 家庭与生育相关图片
+                        'https://picsum.photos/id/1027/800/400'  // 女性自我关爱相关图片
+                    ],
             functionItems: [
                 { image: '/static/Index/fc1.png', title: '健康知识库' },
                 { image: '/static/Index/fc2.png', title: '中医小宝典' },
@@ -72,24 +75,7 @@ export default {
                 { image: '/static/Index/fc8.png', title: '专家咨询室' }
             ],
             activeTab: 'tweet',
-            tweets: [
-                {
-                    time: '2024-01-01',
-                    title: '推文标题1',
-                    readCount: 100,
-                    likeCount: 20,
-                    shareCount: 10,
-                    image: 'https://picsum.photos/100/100'
-                },
-                {
-                    time: '2024-01-02',
-                    title: '推文标题2',
-                    readCount: 200,
-                    likeCount: 30,
-                    shareCount: 15,
-                    image: 'https://picsum.photos/100/101'
-                }
-            ]
+            tweets: []
         };
     },
     computed: {
@@ -104,12 +90,56 @@ export default {
             return '33.33%';
         }
     },
+    onLoad() {
+        console.log(123)
+        this.initArticleData()
+    },
     methods: {
+        async initArticleData(){
+            try {
+                const res = await getArticleApi()
+                console.log('获取推文数据成功:', res.data.data)
+                if (res.data && res.data.data) {
+                    this.tweets = res.data.data
+                }
+            } catch (error) {
+                console.error('获取推文数据失败:', error)
+                uni.showToast({
+                    title: '获取推文数据失败',
+                    icon: 'none'
+                })
+            }
+        },
         ClickFunctionItem(moduleName) {
             console.log(`点击的功能模块名：${moduleName}`);
+            // 修正 switch 语句语法
+            switch (moduleName) {
+                case '中医小宝典':
+                    console.log(123);
+                    //跳转到中医页
+                    uni.navigateTo({
+                        url:'/pages/health/health'
+                    })
+                    break;
+                default:
+                    break;
+            }
         },
         ClickTweet(tweet) {
             console.log('点击的推文信息：', tweet);
+        },
+        formatDate(dateString) {
+            if (!dateString) return ''
+            // 处理ISO格式的日期字符串
+            const date = new Date(dateString)
+            return date.toLocaleDateString() // 返回类似 "2025/03/30" 的格式
+        },
+        getImageUrl(imageUrl) {
+            // 处理图片URL，如果为"0"或空则使用默认图片
+            if (!imageUrl || imageUrl === '0') {
+                return 'https://picsum.photos/100/100' // 默认图片
+            }
+            return imageUrl
         }
     }
 };
@@ -120,10 +150,18 @@ html, body {
     height: 100%;
     overflow: hidden;
 }
-
+.zw{
+	display:block;
+	width: 100vw;
+	height: 50px;
+	scale:5;
+	
+}
 .page-container {
     height: 100%;
-    overflow: hidden;
+    overflow-y: auto; // 允许内容滚动
+    padding-bottom: 60rpx; // 添加底部边距
+    box-sizing: border-box;
 }
 
 .bg {
@@ -248,6 +286,7 @@ html, body {
     width: 90vw;
     margin: 0 auto;
     margin-top: 3vh;
+    margin-bottom: 40rpx; // 为推文区域添加底部边距
 }
 
 .tweet-title {
@@ -287,7 +326,7 @@ html, body {
 .tweet-items-container {
     width: 100%;
     overflow-y: auto;
-    max-height: 300px; /* 可根据需要调整最大高度 */
+    max-height: 40vh; // 使用视口高度百分比，更具响应性
 }
 
 .tweet-item {
@@ -345,4 +384,4 @@ html, body {
 .stats {
     color: #F3B7B6;
 }
-</style>    
+</style>

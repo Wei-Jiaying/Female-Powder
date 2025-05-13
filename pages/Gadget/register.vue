@@ -60,6 +60,8 @@
 </template>
 
 <script>
+	import {registApi} from '../../request/aip/login'
+	
 	export default {
 		data() {
 			return {
@@ -79,82 +81,77 @@
 				// console.log('Checkbox changed, selected values:', e.detail.value); // 输出选中的值
 				this.agreePrivacy = e.detail.value; // 更新 agreePrivacy
 			},
-			handleRegister() {
-				console.log('最终提交的表单数据：', {
-					username: this.username,
-					password: this.password,
-					confirmPassword: this.confirmPassword,
-					agreePrivacy: 1 // 直接使用 agreePrivacy
-				});
-
-				if (!this.username) {
-					uni.showToast({
-						title: '请输入账号',
-						icon: 'none'
-					});
-					return;
-				}
-				if (!this.password) {
-					uni.showToast({
-						title: '请输入密码',
-						icon: 'none'
-					});
-					return;
-				}
-				if (this.password !== this.confirmPassword) {
-					uni.showToast({
-						title: '两次输入密码不一致',
-						icon: 'none'
-					});
-					return;
-				}
-				if (!this.agreePrivacy.includes('1')) {
-					uni.showToast({
-						title: '请同意隐私协议',
-						icon: 'none'
-					});
-					return;
-				}
-
-
-				uni.request({
-					url: '/api/register',
-					method: 'POST',
-					header: {
-						'Content-Type': 'application/json',
-						// 'X-Bypass-Auth': 'true' 
-					},
-					data: {
-						username: this.username,
-						password: this.password,
-						confirmpassword: this.confirmPassword,
-						agreePrivacy: 1 // 将协议值传递为 '1' 或 '0'
-					},
-					success: (res) => {
-						console.log('注册接口返回数据:', res.data); // 新增打印返回数据
-						if (res.data.code === 1) {
-							uni.showToast({
-								title: '注册成功',
-								icon: 'success'
-							});
-							uni.navigateTo({
-								url: '/pages/Gadget/login'
-							});
-						} else {
-							uni.showToast({
-								title: res.data.msg || '登录失败',
-								icon: 'none',
-							});
-						}
-					},
-					fail: (err) => {
-						console.error('注册请求失败', err);
-						uni.showToast({
-							title: '网络请求失败',
-							icon: 'none'
-						});
-					}
-				});
+			async handleRegister() {
+			  try {
+			    console.log('最终提交的表单数据：', {
+			      username: this.username,
+			      password: this.password,
+			      confirmPassword: this.confirmPassword,
+			      agreePrivacy: this.agreePrivacy ? '1' : '0'
+			    });
+			
+			    // 表单验证
+			    if (!this.username) {
+			      uni.showToast({ title: '请输入账号', icon: 'none' });
+			      return;
+			    }
+			    
+			    if (!this.password) {
+			      uni.showToast({ title: '请输入密码', icon: 'none' });
+			      return;
+			    }
+			    
+			    if (this.password !== this.confirmPassword) {
+			      uni.showToast({ title: '两次输入密码不一致', icon: 'none' });
+			      return;
+			    }
+			    
+			    if (!this.agreePrivacy) {
+			      uni.showToast({ title: '请同意隐私协议', icon: 'none' });
+			      return;
+			    }
+			
+			    // 调用注册API
+			    const res = await registApi({
+			      username: this.username,
+			      password: this.password,
+			      confirmpassword: this.confirmPassword,
+			      agreePrivacy: '1'
+			    });
+			
+			    console.log('注册接口返回数据:', res);
+			    
+			    // 处理API响应
+			    if (res.data.code === 1) {
+			      uni.showToast({
+			        title: '注册成功',
+			        icon: 'success',
+			        duration: 2000
+			      });
+			      
+			      // 注册成功后跳转到登录页
+			      setTimeout(() => {
+			        uni.navigateTo({
+			          url: '/pages/Gadget/login'
+			        });
+			      }, 2000);
+			      
+			    } else {
+			      // 业务错误处理
+			      uni.showToast({
+			        title: res.msg || '注册失败，请重试',
+			        icon: 'none'
+			      });
+			    }
+			    
+			  } catch (error) {
+			    // 网络错误处理
+			    console.error('注册请求异常:', error);
+			    uni.showToast({
+			      title: '网络请求失败，请检查网络连接',
+			      icon: 'none'
+			    });
+			  }
 			}
 		}
 	};
