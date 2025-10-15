@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "健康",
+  "usingComponents": {
+    "prepare-mode": "./PrepareMode",
+    "pregnancy-mode": "./PregnancyMode",
+    "postpartum-mode": "./PostpartumMode"
+  }
+}

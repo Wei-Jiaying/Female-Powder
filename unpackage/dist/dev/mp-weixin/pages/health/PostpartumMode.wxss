@@ -1,0 +1,680 @@
+/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+/* 全局样式保持不变 */
+.postpartum-page.data-v-91338ebb {
+  padding: 20rpx;
+  background-color: #fef4ff;
+  min-height: 100vh;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+.background.data-v-91338ebb {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, #fff9e8 0%, #ffeeef 30%, #f8e8ff 100%);
+  z-index: -1;
+  opacity: 0.5;
+}
+
+/* 标题样式 */
+.title.data-v-91338ebb {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20rpx;
+  position: relative;
+}
+.title .icon.data-v-91338ebb {
+  width: 48rpx;
+  height: 48rpx;
+  border-radius: 12rpx;
+  background-color: #c5dffe;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28rpx;
+  margin-right: 15rpx;
+}
+.title .title-text.data-v-91338ebb {
+  font-size: 30rpx;
+  font-weight: 600;
+  color: #333;
+}
+
+/* 卡片样式 */
+.card.data-v-91338ebb {
+  background-color: #fff;
+  border-radius: 24rpx;
+  padding: 25rpx;
+  margin-bottom: 25rpx;
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.05);
+}
+
+/* 顶部容器、功能按钮、心情记录等样式保持不变 */
+.top-container.data-v-91338ebb {
+  background-color: #fff;
+  border-radius: 24rpx;
+  padding: 25rpx;
+  margin-bottom: 25rpx;
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.05);
+}
+.postpartum-status-box.data-v-91338ebb {
+  position: absolute;
+  right: 0;
+  background-color: #c5dffe;
+  color: #3250aa;
+  font-size: 22rpx;
+  font-weight: 500;
+  padding: 6rpx 16rpx;
+  border-radius: 16rpx;
+}
+.function-grid.data-v-91338ebb {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15rpx;
+}
+.function-item.data-v-91338ebb {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15rpx;
+  background-color: #f9f9f9;
+  border-radius: 16rpx;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.function-item.data-v-91338ebb:active {
+  background-color: #f0f0f0;
+}
+.function-icon.data-v-91338ebb {
+  width: 50rpx;
+  height: 50rpx;
+  background-color: #e6f3ff;
+  border-radius: 10rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28rpx;
+  margin-bottom: 10rpx;
+}
+.function-name.data-v-91338ebb {
+  font-size: 24rpx;
+  color: #666;
+  text-align: center;
+}
+.mood-record.data-v-91338ebb {
+  background-color: #fff;
+  border-radius: 24rpx;
+  padding: 25rpx;
+  margin-bottom: 25rpx;
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.05);
+}
+.emoji-list.data-v-91338ebb {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20rpx;
+}
+.emoji.data-v-91338ebb {
+  font-size: 60rpx;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.emoji-active.data-v-91338ebb {
+  transform: scale(1.1);
+  color: #8ab4f8;
+}
+
+/* 产后修复样式 */
+.repair-info.data-v-91338ebb {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.wound-tracking.data-v-91338ebb {
+  flex: 1;
+  margin-right: 20rpx;
+}
+.tracking-item.data-v-91338ebb {
+  margin-bottom: 15rpx;
+}
+.tracking-label.data-v-91338ebb {
+  font-size: 26rpx;
+  font-weight: 600;
+  color: #333;
+}
+.tracking-sub-label.data-v-91338ebb {
+  display: inline-block;
+  width: 120rpx;
+  font-size: 24rpx;
+  color: #666;
+}
+.tracking-value.data-v-91338ebb {
+  font-size: 24rpx;
+  color: #333;
+}
+.tracking-notes.data-v-91338ebb {
+  margin-top: 10rpx;
+  padding: 15rpx;
+  background-color: #f5f5f5;
+  border-radius: 12rpx;
+}
+.notes-text.data-v-91338ebb {
+  font-size: 22rpx;
+  color: #666;
+  line-height: 1.5;
+}
+.repair-buttons.data-v-91338ebb {
+  display: flex;
+  flex-direction: column;
+  gap: 15rpx;
+}
+.button-item.data-v-91338ebb {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 140rpx;
+  height: 100rpx;
+  background-color: #f0e6f5;
+  border-radius: 16rpx;
+  cursor: pointer;
+}
+.button-icon.data-v-91338ebb {
+  font-size: 36rpx;
+  margin-bottom: 8rpx;
+  color: #92646e;
+}
+.button-text.data-v-91338ebb {
+  font-size: 22rpx;
+  color: #92646e;
+}
+
+/* 营养膳食样式 */
+.meal-status.data-v-91338ebb {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30rpx;
+}
+.meal-circles.data-v-91338ebb {
+  display: flex;
+  gap: 30rpx;
+}
+.meal-circle.data-v-91338ebb {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.circle-active.data-v-91338ebb {
+  background-color: #e6f3ff;
+  color: #0066cc;
+  box-shadow: 0 4rpx 8rpx rgba(0, 102, 204, 0.15);
+}
+.meal-name.data-v-91338ebb {
+  font-size: 24rpx;
+  font-weight: 500;
+}
+.photo-identify.data-v-91338ebb {
+  display: flex;
+  align-items: center;
+  padding: 12rpx 20rpx;
+  background-color: #e6f3ff;
+  border-radius: 16rpx;
+  cursor: pointer;
+}
+.nutrition-params.data-v-91338ebb {
+  margin-bottom: 30rpx;
+}
+.param-item.data-v-91338ebb {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+.param-name.data-v-91338ebb {
+  width: 100rpx;
+  font-size: 24rpx;
+  color: #666;
+}
+.param-bar.data-v-91338ebb {
+  flex: 1;
+  height: 20rpx;
+  background-color: #f0f0f0;
+  border-radius: 10rpx;
+  overflow: hidden;
+  margin: 0 15rpx;
+}
+.bar-fill.data-v-91338ebb {
+  height: 100%;
+  background-color: #8ab4f8;
+  border-radius: 10rpx;
+  transition: width 0.5s;
+}
+.param-value.data-v-91338ebb {
+  font-size: 24rpx;
+  color: #333;
+  width: 120rpx;
+  text-align: right;
+}
+.diet-tips.data-v-91338ebb {
+  padding: 15rpx;
+  background-color: #fff0f5;
+  border-radius: 16rpx;
+  margin-bottom: 30rpx;
+}
+.tips-text.data-v-91338ebb {
+  font-size: 22rpx;
+  color: #92646e;
+  line-height: 1.5;
+}
+.recommend-meals.data-v-91338ebb {
+  margin-bottom: 30rpx;
+}
+.recommend-title.data-v-91338ebb {
+  display: block;
+  font-size: 26rpx;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 15rpx;
+}
+.meals-list.data-v-91338ebb {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15rpx;
+}
+.meal-item.data-v-91338ebb {
+  padding: 10rpx 20rpx;
+  background-color: #f5f5f5;
+  border-radius: 16rpx;
+}
+.meal-name.data-v-91338ebb {
+  font-size: 22rpx;
+  color: #666;
+}
+.view-more.data-v-91338ebb {
+  font-size: 22rpx;
+  color: #0066cc;
+  text-decoration: underline;
+  margin-left: 10rpx;
+  cursor: pointer;
+}
+.grocery-list.data-v-91338ebb {
+  margin-bottom: 30rpx;
+  padding: 15rpx;
+  background-color: #f5f7ff;
+  border-radius: 16rpx;
+}
+.list-title.data-v-91338ebb {
+  display: block;
+  font-size: 24rpx;
+  font-weight: 600;
+  color: #3250aa;
+  margin-bottom: 10rpx;
+}
+.list-content.data-v-91338ebb {
+  font-size: 22rpx;
+  color: #666;
+}
+.diet-actions.data-v-91338ebb {
+  display: flex;
+  gap: 15rpx;
+}
+.action-item.data-v-91338ebb {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15rpx;
+  background-color: #f9f9f9;
+  border-radius: 16rpx;
+  cursor: pointer;
+}
+.action-icon.data-v-91338ebb {
+  margin-right: 8rpx;
+  font-size: 24rpx;
+  color: #666;
+}
+.action-text.data-v-91338ebb {
+  font-size: 22rpx;
+  color: #666;
+}
+
+/* 运动康复样式 */
+.course-status.data-v-91338ebb {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+.course-title.data-v-91338ebb {
+  font-size: 26rpx;
+  font-weight: 600;
+  color: #333;
+}
+.plan-btn.data-v-91338ebb {
+  padding: 8rpx 20rpx;
+  background-color: #e6f3ff;
+  color: #0066cc;
+  border-radius: 16rpx;
+  font-size: 22rpx;
+  cursor: pointer;
+}
+.courses-list.data-v-91338ebb {
+  display: flex;
+  flex-direction: column;
+  gap: 15rpx;
+}
+.course-item.data-v-91338ebb {
+  padding: 20rpx;
+  background-color: #f9f9f9;
+  border-radius: 16rpx;
+}
+.course-name.data-v-91338ebb {
+  font-size: 24rpx;
+  color: #333;
+  line-height: 1.5;
+}
+
+/* 拍照鉴定弹窗样式 */
+.scan-popup.data-v-91338ebb {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+}
+.scan-mask.data-v-91338ebb {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.scan-container.data-v-91338ebb {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30%;
+  box-sizing: border-box;
+}
+.scan-box.data-v-91338ebb {
+  width: 60%;
+  height: 40%;
+  position: relative;
+  border: 2rpx solid #fff;
+  box-shadow: 0 0 0 100vh rgba(0, 0, 0, 0.5);
+  margin-bottom: 50rpx;
+}
+.scan-frame.data-v-91338ebb {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 10rpx solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  pointer-events: none;
+}
+.scan-line.data-v-91338ebb {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6rpx;
+  background-color: #00cc66;
+  animation: scanMove-91338ebb 2s infinite linear;
+}
+@keyframes scanMove-91338ebb {
+0% {
+    top: 0;
+}
+100% {
+    top: calc(100% - 6rpx);
+}
+}
+.scan-tip.data-v-91338ebb {
+  color: #fff;
+  font-size: 28rpx;
+  margin-bottom: 80rpx;
+  text-align: center;
+  padding: 0 20rpx;
+}
+.scan-buttons.data-v-91338ebb {
+  display: flex;
+  gap: 40rpx;
+  margin-top: auto;
+  margin-bottom: 80rpx;
+}
+.scan-btn.data-v-91338ebb {
+  width: 200rpx;
+  height: 70rpx;
+  border-radius: 35rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28rpx;
+  color: #fff;
+  cursor: pointer;
+}
+.cancel-btn.data-v-91338ebb {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.confirm-btn.data-v-91338ebb {
+  background-color: #00cc66;
+}
+
+/* 表单弹窗通用样式 */
+.form-popup.data-v-91338ebb {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+}
+.form-mask.data-v-91338ebb {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.form-content.data-v-91338ebb {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 24rpx 24rpx 0 0;
+  padding: 25rpx;
+  max-height: 80vh;
+  box-sizing: border-box;
+}
+.form-header.data-v-91338ebb {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25rpx;
+  padding-bottom: 15rpx;
+  border-bottom: 1px solid #f0f0f0;
+}
+.form-title.data-v-91338ebb {
+  font-size: 30rpx;
+  font-weight: 600;
+  color: #333;
+}
+.form-close.data-v-91338ebb {
+  font-size: 36rpx;
+  color: #999;
+  cursor: pointer;
+}
+.form-body.data-v-91338ebb {
+  max-height: calc(80vh - 180rpx);
+  overflow-y: auto;
+  padding-right: 10rpx;
+}
+.form-item.data-v-91338ebb {
+  margin-bottom: 30rpx;
+}
+.form-label.data-v-91338ebb {
+  display: block;
+  font-size: 24rpx;
+  color: #666;
+  margin-bottom: 10rpx;
+}
+.form-value.data-v-91338ebb {
+  font-size: 24rpx;
+  color: #333;
+  padding: 12rpx 15rpx;
+  background-color: #f5f5f5;
+  border-radius: 12rpx;
+  display: block;
+}
+.picker-view.data-v-91338ebb {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12rpx 15rpx;
+  background-color: #f5f5f5;
+  border-radius: 12rpx;
+  font-size: 24rpx;
+  color: #333;
+}
+.picker-arrow.data-v-91338ebb {
+  font-size: 20rpx;
+  color: #999;
+}
+.form-textarea.data-v-91338ebb {
+  width: 100%;
+  padding: 15rpx;
+  background-color: #f5f5f5;
+  border-radius: 12rpx;
+  border: none;
+  outline: none;
+  font-size: 24rpx;
+  color: #333;
+  min-height: 120rpx;
+  box-sizing: border-box;
+}
+.radio-group.data-v-91338ebb {
+  display: flex;
+  gap: 30rpx;
+}
+.radio-item.data-v-91338ebb {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.radio-circle.data-v-91338ebb {
+  width: 28rpx;
+  height: 28rpx;
+  border-radius: 50%;
+  border: 2rpx solid #999;
+  margin-right: 10rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.radio-checked.data-v-91338ebb {
+  border-color: #8ab4f8;
+  background-color: #8ab4f8;
+}
+.radio-text.data-v-91338ebb {
+  font-size: 24rpx;
+  color: #333;
+}
+.checkbox-group.data-v-91338ebb {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20rpx;
+}
+.checkbox-item.data-v-91338ebb {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10rpx;
+  cursor: pointer;
+}
+.checkbox-box.data-v-91338ebb {
+  width: 28rpx;
+  height: 28rpx;
+  border-radius: 6rpx;
+  border: 2rpx solid #999;
+  margin-right: 10rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.checkbox-checked.data-v-91338ebb {
+  border-color: #8ab4f8;
+  background-color: #8ab4f8;
+}
+.checkbox-icon.data-v-91338ebb {
+  font-size: 20rpx;
+  color: #fff;
+}
+.checkbox-text.data-v-91338ebb {
+  font-size: 24rpx;
+  color: #333;
+}
+.form-footer.data-v-91338ebb {
+  display: flex;
+  gap: 20rpx;
+  margin-top: 20rpx;
+  padding-top: 15rpx;
+  border-top: 1px solid #f0f0f0;
+}
+.form-btn.data-v-91338ebb {
+  flex: 1;
+  height: 70rpx;
+  border-radius: 16rpx;
+  font-size: 26rpx;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+}
+.form-btn.cancel.data-v-91338ebb {
+  background-color: #f5f5f5;
+  color: #666;
+}
+.form-btn.confirm.data-v-91338ebb {
+  background-color: #8ab4f8;
+  color: #fff;
+}

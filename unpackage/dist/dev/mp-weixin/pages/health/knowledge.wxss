@@ -1,0 +1,290 @@
+/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+/* 页面全局样式：延续首页柔和渐变 */
+.knowledge-page.data-v-fbf9e847 {
+  background: linear-gradient(180deg, #FDF7D5 0%, #F9F5F0 100%);
+  min-height: 100vh;
+  padding: 0 24rpx 60rpx;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* 顶部导航栏：统一风格 */
+.page-header.data-v-fbf9e847 {
+  display: flex;
+  align-items: center;
+  height: 90rpx;
+  margin-bottom: 20rpx;
+}
+.back-btn.data-v-fbf9e847 {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  background-color: #F9DFEF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.back-icon.data-v-fbf9e847 {
+  font-size: 32rpx;
+  color: #F3B7B6;
+  font-weight: bold;
+}
+.header-title.data-v-fbf9e847 {
+  flex: 1;
+  text-align: center;
+  font-size: 32rpx;
+  color: #333;
+  font-weight: 600;
+}
+.header-placeholder.data-v-fbf9e847 {
+  width: 60rpx;
+}
+
+/* 搜索栏：复用首页样式，适配主题 */
+.search-bar.data-v-fbf9e847 {
+  margin-bottom: 30rpx;
+}
+.search-container.data-v-fbf9e847 {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 60rpx;
+  padding: 0 30rpx;
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.08);
+  height: 72rpx;
+}
+.search-icon.data-v-fbf9e847 {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 20rpx;
+}
+.search-input.data-v-fbf9e847 {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 24rpx;
+  color: #333;
+  height: 100%;
+}
+.search-button.data-v-fbf9e847 {
+  width: 140rpx;
+  height: 56rpx;
+  background-color: #F3B7B6;
+  color: #fff;
+  border-radius: 28rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24rpx;
+  font-weight: 500;
+}
+
+/* 阶段分类标签：核心导航，突出当前阶段 */
+.stage-tabs.data-v-fbf9e847 {
+  display: flex;
+  gap: 15rpx;
+  margin-bottom: 35rpx;
+  overflow-x: auto;
+  padding-bottom: 10rpx;
+}
+.tab-item.data-v-fbf9e847 {
+  min-width: 220rpx;
+  height: 70rpx;
+  border-radius: 35rpx;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12rpx;
+  box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.tab-item.active.data-v-fbf9e847 {
+  background-color: #F2DDFF;
+  color: #9966CC;
+  box-shadow: 0 4rpx 12rpx rgba(153, 102, 204, 0.15);
+}
+.tab-icon.data-v-fbf9e847 {
+  font-size: 28rpx;
+}
+.tab-text.data-v-fbf9e847 {
+  font-size: 26rpx;
+  font-weight: 500;
+}
+
+/* 知识容器：统一布局 */
+.knowledge-container.data-v-fbf9e847 {
+  margin-bottom: 40rpx;
+}
+
+/* 分类标题：区分知识类型 */
+.category-title.data-v-fbf9e847 {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25rpx;
+}
+.title-icon.data-v-fbf9e847 {
+  font-size: 28rpx;
+  color: #F3B7B6;
+  margin-right: 15rpx;
+}
+.title-text.data-v-fbf9e847 {
+  font-size: 26rpx;
+  color: #333;
+  font-weight: 600;
+}
+
+/* 知识卡片：图文结合，突出重点 */
+.knowledge-list.data-v-fbf9e847 {
+  display: flex;
+  flex-direction: column;
+  gap: 25rpx;
+}
+.knowledge-card.data-v-fbf9e847 {
+  display: flex;
+  gap: 20rpx;
+  background-color: #fff;
+  border-radius: 24rpx;
+  overflow: hidden;
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.05);
+  padding: 20rpx;
+  transition: all 0.2s;
+}
+.knowledge-card.data-v-fbf9e847:active {
+  transform: scale(0.98);
+  box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.03);
+}
+.card-cover.data-v-fbf9e847 {
+  width: 160rpx;
+  height: 120rpx;
+  border-radius: 16rpx;
+  object-fit: cover;
+}
+.card-content.data-v-fbf9e847 {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card-title.data-v-fbf9e847 {
+  font-size: 26rpx;
+  color: #333;
+  font-weight: 500;
+  margin-bottom: 8rpx;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.card-desc.data-v-fbf9e847 {
+  font-size: 22rpx;
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 12rpx;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.card-meta.data-v-fbf9e847 {
+  display: flex;
+  justify-content: space-between;
+  font-size: 20rpx;
+  color: #999;
+}
+
+/* 常见问题：折叠面板样式 */
+.faq-list.data-v-fbf9e847 {
+  display: flex;
+  flex-direction: column;
+  gap: 15rpx;
+}
+.faq-item.data-v-fbf9e847 {
+  background-color: #fff;
+  border-radius: 20rpx;
+  box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+.faq-header.data-v-fbf9e847 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22rpx 25rpx;
+  cursor: pointer;
+}
+.faq-question.data-v-fbf9e847 {
+  font-size: 24rpx;
+  color: #333;
+  flex: 1;
+  margin-right: 20rpx;
+}
+.faq-arrow.data-v-fbf9e847 {
+  font-size: 20rpx;
+  color: #999;
+  transition: transform 0.3s;
+}
+.faq-arrow.active.data-v-fbf9e847 {
+  transform: rotate(180deg);
+  color: #F3B7B6;
+}
+.faq-answer.data-v-fbf9e847 {
+  font-size: 22rpx;
+  color: #666;
+  line-height: 1.6;
+  padding: 0 25rpx 22rpx;
+  border-top: 2rpx solid #F5F5F5;
+}
+
+/* 底部信息栏：统一风格 */
+.bottom-bar.data-v-fbf9e847 {
+  width: 100%;
+  height: 50rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20rpx;
+}
+.bottom-text.data-v-fbf9e847 {
+  font-size: 22rpx;
+  color: #999;
+  letter-spacing: 1rpx;
+}
+
+/* 小屏适配：保证内容不溢出 */
+@media (max-width: 320px) {
+.tab-item.data-v-fbf9e847 {
+    min-width: 180rpx;
+}
+.card-cover.data-v-fbf9e847 {
+    width: 140rpx;
+    height: 100rpx;
+}
+.card-title.data-v-fbf9e847 {
+    font-size: 24rpx;
+}
+}

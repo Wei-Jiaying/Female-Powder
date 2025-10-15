@@ -1,0 +1,375 @@
+/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+/* 基础样式：蓝白主题 */
+.medical-record-page.data-v-592fc685 {
+  background-color: #f5f8fc;
+  min-height: 100vh;
+  padding: 0 24rpx 60rpx;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* 顶部导航 */
+.page-header.data-v-592fc685 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 90rpx;
+  padding: 0 10rpx;
+  margin-bottom: 20rpx;
+}
+.back-btn.data-v-592fc685 {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  background-color: #e6f0fb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.back-icon.data-v-592fc685 {
+  font-size: 30rpx;
+  color: #1e88e5;
+  font-weight: bold;
+}
+.header-title.data-v-592fc685 {
+  font-size: 32rpx;
+  color: #1a5ca3;
+  font-weight: 600;
+}
+.header-menu.data-v-592fc685 {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  background-color: #e6f0fb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu-icon.data-v-592fc685 {
+  font-size: 28rpx;
+  color: #1e88e5;
+  font-weight: bold;
+}
+
+/* 功能入口区 */
+.function-entrance.data-v-592fc685 {
+  display: flex;
+  gap: 24rpx;
+  margin-bottom: 35rpx;
+}
+.upload-card.data-v-592fc685,
+.manual-card.data-v-592fc685 {
+  flex: 1;
+  background-color: #fff;
+  border-radius: 20rpx;
+  padding: 30rpx 20rpx;
+  text-align: center;
+  box-shadow: 0 4rpx 12rpx rgba(30, 136, 229, 0.08);
+  transition: all 0.2s;
+}
+.upload-card.data-v-592fc685:active,
+.manual-card.data-v-592fc685:active {
+  transform: scale(0.98);
+  box-shadow: 0 2rpx 8rpx rgba(30, 136, 229, 0.05);
+}
+.upload-icon.data-v-592fc685,
+.manual-icon.data-v-592fc685 {
+  font-size: 60rpx;
+  color: #1e88e5;
+  margin-bottom: 20rpx;
+  display: inline-block;
+}
+.upload-text.data-v-592fc685,
+.manual-text.data-v-592fc685 {
+  font-size: 28rpx;
+  color: #1a5ca3;
+  font-weight: 500;
+  margin-bottom: 10rpx;
+  display: block;
+}
+.upload-desc.data-v-592fc685,
+.manual-desc.data-v-592fc685 {
+  font-size: 22rpx;
+  color: #6495b7;
+  line-height: 1.5;
+}
+
+/* 内容区通用样式 */
+.content-area.data-v-592fc685 {
+  background-color: #fff;
+  border-radius: 20rpx;
+  padding: 25rpx;
+  box-shadow: 0 4rpx 12rpx rgba(30, 136, 229, 0.08);
+}
+.section-title.data-v-592fc685 {
+  font-size: 28rpx;
+  color: #1a5ca3;
+  font-weight: 600;
+  margin-bottom: 25rpx;
+  display: block;
+  padding-left: 10rpx;
+  border-left: 4rpx solid #1e88e5;
+}
+
+/* 示例病历单样式 */
+.record-example.data-v-592fc685 {
+  border: 1rpx solid #e6f0fb;
+  border-radius: 16rpx;
+  overflow: hidden;
+}
+.record-header.data-v-592fc685 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f0f7ff;
+  padding: 18rpx 20rpx;
+}
+.record-type.data-v-592fc685 {
+  font-size: 26rpx;
+  color: #1a5ca3;
+  font-weight: 500;
+}
+.record-date.data-v-592fc685 {
+  font-size: 22rpx;
+  color: #6495b7;
+}
+
+/* 指标表格样式 */
+.index-table.data-v-592fc685 {
+  width: 100%;
+}
+.table-header.data-v-592fc685 {
+  display: flex;
+  background-color: #e6f0fb;
+  border-bottom: 1rpx solid #d1e4f7;
+}
+.header-item.data-v-592fc685 {
+  flex: 1;
+  padding: 15rpx 10rpx;
+  font-size: 22rpx;
+  color: #1a5ca3;
+  font-weight: 500;
+  text-align: center;
+}
+.table-row.data-v-592fc685 {
+  display: flex;
+  border-bottom: 1rpx solid #f0f7ff;
+}
+.table-row.data-v-592fc685:last-child {
+  border-bottom: none;
+}
+.row-item.data-v-592fc685 {
+  flex: 1;
+  padding: 18rpx 10rpx;
+  font-size: 22rpx;
+  color: #333;
+  text-align: center;
+  word-break: break-all;
+}
+.desc-item.data-v-592fc685 {
+  text-align: left;
+}
+.abnormal.data-v-592fc685 {
+  color: #e53935;
+  font-weight: 500;
+}
+
+/* 结论区域 */
+.conclusion.data-v-592fc685 {
+  padding: 20rpx;
+  background-color: #f9fcfd;
+  border-top: 1rpx solid #e6f0fb;
+}
+.conclusion-title.data-v-592fc685 {
+  font-size: 24rpx;
+  color: #1a5ca3;
+  font-weight: 500;
+}
+.conclusion-content.data-v-592fc685 {
+  font-size: 22rpx;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* 手动查询区样式 */
+.search-box.data-v-592fc685 {
+  display: flex;
+  gap: 15rpx;
+  margin-bottom: 30rpx;
+}
+.search-input.data-v-592fc685 {
+  flex: 1;
+  height: 70rpx;
+  background-color: #f5f8fc;
+  border: 1rpx solid #d1e4f7;
+  border-radius: 10rpx;
+  padding: 0 20rpx;
+  font-size: 24rpx;
+  color: #333;
+  outline: none;
+}
+.search-btn.data-v-592fc685 {
+  width: 120rpx;
+  height: 70rpx;
+  background-color: #1e88e5;
+  color: #fff;
+  border-radius: 10rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24rpx;
+  font-weight: 500;
+}
+
+/* 搜索结果样式 */
+.search-result.data-v-592fc685 {
+  display: flex;
+  flex-direction: column;
+  gap: 20rpx;
+}
+.result-item.data-v-592fc685 {
+  border-bottom: 1rpx solid #f0f7ff;
+  padding-bottom: 20rpx;
+}
+.result-item.data-v-592fc685:last-child {
+  border-bottom: none;
+}
+.result-name.data-v-592fc685 {
+  font-size: 26rpx;
+  color: #1a5ca3;
+  font-weight: 500;
+  margin-bottom: 15rpx;
+  display: block;
+}
+.result-detail.data-v-592fc685 {
+  padding-left: 10rpx;
+}
+.detail-row.data-v-592fc685 {
+  display: flex;
+  margin-bottom: 12rpx;
+}
+.detail-row.data-v-592fc685:last-child {
+  margin-bottom: 0;
+}
+.detail-label.data-v-592fc685 {
+  font-size: 22rpx;
+  color: #6495b7;
+  min-width: 120rpx;
+}
+.detail-value.data-v-592fc685 {
+  font-size: 22rpx;
+  color: #333;
+  flex: 1;
+  line-height: 1.6;
+}
+
+/* 热门查询样式 */
+.hot-search.data-v-592fc685 {
+  padding-top: 10rpx;
+}
+.hot-title.data-v-592fc685 {
+  font-size: 24rpx;
+  color: #6495b7;
+  margin-bottom: 20rpx;
+  display: block;
+}
+.hot-tags.data-v-592fc685 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15rpx;
+}
+.tag.data-v-592fc685 {
+  padding: 12rpx 20rpx;
+  background-color: #f0f7ff;
+  border-radius: 20rpx;
+  font-size: 22rpx;
+  color: #1a5ca3;
+}
+
+/* 帮助弹窗样式 */
+.help-mask.data-v-592fc685 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 998;
+}
+.help-popup.data-v-592fc685 {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  background-color: #fff;
+  border-radius: 20rpx;
+  padding: 30rpx;
+  z-index: 999;
+}
+.help-title.data-v-592fc685 {
+  font-size: 28rpx;
+  color: #1a5ca3;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 25rpx;
+  text-align: center;
+}
+.help-content.data-v-592fc685 {
+  margin-bottom: 30rpx;
+}
+.help-item.data-v-592fc685 {
+  display: block;
+  font-size: 22rpx;
+  color: #333;
+  line-height: 1.8;
+  margin-bottom: 15rpx;
+}
+.help-close.data-v-592fc685 {
+  display: block;
+  width: 100%;
+  height: 60rpx;
+  background-color: #1e88e5;
+  color: #fff;
+  border-radius: 10rpx;
+  text-align: center;
+  line-height: 60rpx;
+  font-size: 24rpx;
+}
+
+/* 响应式调整 */
+@media (max-width: 320px) {
+.row-item.data-v-592fc685,
+.header-item.data-v-592fc685 {
+    font-size: 20rpx;
+    padding: 15rpx 5rpx;
+}
+.upload-text.data-v-592fc685,
+.manual-text.data-v-592fc685 {
+    font-size: 26rpx;
+}
+}
